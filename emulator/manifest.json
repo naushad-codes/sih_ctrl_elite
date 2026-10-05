@@ -1,0 +1,8 @@
+{
+  "package": "pratibimb-station-emulator",
+  "status": "NOT_CONFIGURED",
+  "source_kind": "DEMO_SYNTHETIC",
+  "model_version": "emulator-v0.1",
+  "note": "No synthetic observations are generated until an explicit fixture or operator input is provided.",
+  "fields": ["power_available_kw", "critical_load_kw", "deferrable_load_kw", "fuel_l", "indoor_temperature_c", "outdoor_temperature_c", "water_production_lph", "water_storage_l", "connectivity"]
+}

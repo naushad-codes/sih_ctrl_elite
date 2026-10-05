@@ -1,0 +1,11 @@
+{
+  "id": "maitri",
+  "name": "Maitri",
+  "manifest_version": "v1",
+  "parameters": {
+    "generator_capacity_kw": { "value": null, "unit": "kW", "provenance": "UNKNOWN" },
+    "critical_load_kw": { "value": null, "unit": "kW", "provenance": "UNKNOWN" },
+    "fuel_capacity_l": { "value": null, "unit": "L", "provenance": "UNKNOWN" },
+    "thermal_loss_coefficient": { "value": null, "unit": "unknown", "provenance": "UNKNOWN" }
+  }
+}

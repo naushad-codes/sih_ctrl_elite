@@ -1,0 +1,12 @@
+{
+  "dataset_id": "antarctic-weather-local",
+  "status": "NOT_CONFIGURED",
+  "description": "Local normalized weather files only. No remote request or scraping is performed by the application.",
+  "files": { "bharati": [], "maitri": [] },
+  "sources": [
+    { "source": "NCPOR NPDC", "source_url": "https://npdc.ncpor.res.in/npdc/weather_and_env.action", "dataset": "AWS / Meteorological Data", "station": "Bharati", "period": "UNKNOWN", "source_type": "HISTORICAL_WEATHER", "reuse_status": "VERIFY_ACCESS_AND_REUSE_TERMS" },
+    { "source": "NCPOR NPDC", "source_url": "https://npdc.ncpor.res.in/npdc/weather_and_env.action", "dataset": "AWS / Meteorological Data", "station": "Maitri", "period": "UNKNOWN", "source_type": "HISTORICAL_WEATHER", "reuse_status": "VERIFY_ACCESS_AND_REUSE_TERMS" }
+  ],
+  "expected_fields": ["timestamp", "station", "temperature_c", "pressure_hpa", "relative_humidity_pct", "wind_speed", "wind_direction_deg", "source", "source_type", "quality"],
+  "allowed_source_types": ["HISTORICAL_WEATHER", "DEMO_SYNTHETIC", "MANUAL_DEMO_ENTRY"]
+}

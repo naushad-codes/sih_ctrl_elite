@@ -1,0 +1,15 @@
+node_modules/
+dist/
+.venv/
+__pycache__/
+*.py[cod]
+*.pytest_cache/
+.pytest_cache/
+playwright-report/
+test-results/
+.kilo/
+backend/*.db
+backend/*.db-*
+data/demo-runtime/
+*.sqlite
+*.sqlite-*

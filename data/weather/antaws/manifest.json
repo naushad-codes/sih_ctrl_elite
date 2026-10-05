@@ -1,0 +1,10 @@
+{
+  "adapter": "AntAWS",
+  "status": "NOT_CONFIGURED",
+  "source": "AntAWS dataset",
+  "source_url": "https://amrdcdata.ssec.wisc.edu/dataset/antaws-dataset",
+  "source_type": "HISTORICAL_WEATHER",
+  "required": false,
+  "reuse_status": "VERIFY_ACCESS_AND_REUSE_TERMS",
+  "files": { "bharati": [], "maitri": [] }
+}
