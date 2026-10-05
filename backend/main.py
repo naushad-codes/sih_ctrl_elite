@@ -10,6 +10,7 @@ from typing import Literal
 
 from fastapi import FastAPI, HTTPException, Header, Query
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field, ValidationError
 from .model.scenario_model import MODEL_VERSION, run_scenario
 from .emulator.world import snapshot as emulator_snapshot
@@ -1998,3 +1999,8 @@ def queue_inspection_request(request_id: str, authorization: str | None = Header
             raise HTTPException(status_code=404, detail="Request not found for this station")
     result = transition_operation(request_id, authorization, {"hq"}, {"REVIEWED_FOR_COMMUNICATION", "DRAFT"}, "QUEUED", "OPERATION_QUEUED", {"delivery": "PENDING_SYNC"})
     return {"id": request_id, "status": "QUEUED", "delivery": "PENDING_SYNC", "operation": result}
+
+
+frontend_directory = Path(__file__).resolve().parents[1] / "dist"
+if frontend_directory.is_dir():
+    app.mount("/", StaticFiles(directory=frontend_directory, html=True), name="frontend")

@@ -12,7 +12,7 @@ type Session = { token: string; username: string; role: Role; station: Station; 
 type StationInfo = { id: Station; name: string; location: string; code: string; image: string }
 type RoleInfo = { id: Role; title: string; login: string; summary: string; icon: typeof Radio }
 
-const API_URL = import.meta.env.VITE_API_URL ?? 'http://127.0.0.1:8000'
+const API_URL = import.meta.env.VITE_API_URL ?? (import.meta.env.DEV ? 'http://127.0.0.1:8000' : '')
 
 const stations: StationInfo[] = [
   { id: 'bharati', name: 'Bharati Station', location: 'Larsemann Hills, Antarctica', code: 'BHARATI', image: '/stations/bharati.webp' },

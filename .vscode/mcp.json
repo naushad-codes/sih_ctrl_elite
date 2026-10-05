@@ -1,0 +1,19 @@
+{
+  "inputs": [
+    {
+      "type": "promptString",
+      "id": "render_api_key",
+      "description": "Enter your Render API key",
+      "password": true
+    }
+  ],
+  "servers": {
+    "render": {
+      "type": "http",
+      "url": "https://mcp.render.com/mcp",
+      "headers": {
+        "Authorization": "Bearer ${input:render_api_key}"
+      }
+    }
+  }
+}
